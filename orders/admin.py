@@ -8,7 +8,7 @@ class OrderItemInline(admin.TabularInline):
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     # List the fields to be displayed in the admin page
-    list_display = ['id', 'first_name', 'last_name', 'email',
+    list_display = ['order_number', 'first_name', 'last_name', 'email',
     # List the fields to be filtered in the admin page
     'address', 'postal_code', 'city', 'paid',
     # List the fields to be included in the admin page
