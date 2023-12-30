@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,8 @@ DATABASES = {
     }
 }
 
+PAYSTACK_SECRET_KEY = str(os.getenv("PAYSTACK_SECRET_KEY"))
+PAYSTACK_PUBLIC_KEY = str(os.getenv("PAYSTACK_PUBLIC_KEY"))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
